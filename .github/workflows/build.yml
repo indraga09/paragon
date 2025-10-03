@@ -10,8 +10,19 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest, windows-latest]
-        python-version: [3.8]
+        include:
+          - os: macos-latest
+            python-version: 3.8
+            arch: x86_64
+            target: x86_64-apple-darwin
+          - os: macos-14  # Apple Silicon runner
+            python-version: 3.8
+            arch: arm64
+            target: aarch64-apple-darwin
+          - os: windows-latest
+            python-version: 3.8
+            arch: x86_64
+            target: x86_64-pc-windows-msvc
 
     steps:
     - uses: actions/checkout@v2
@@ -24,6 +35,8 @@ jobs:
     - uses: actions-rs/toolchain@v1
       with:
         toolchain: stable
+        target: ${{ matrix.target }}
+        override: true
 
     - name: Install dependencies
       run: |
@@ -33,7 +46,7 @@ jobs:
 
     - name: Build Rust component
       run: |
-        maturin build --release
+        maturin build --release --target ${{ matrix.target }}
 
     - name: Package application (MacOS)
       if: runner.os == 'macOS'
@@ -53,5 +66,5 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: Paragon-${{ runner.os }}
+        name: Paragon-${{ runner.os }}-${{ matrix.arch }}
         path: application/dist
