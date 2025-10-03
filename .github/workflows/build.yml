@@ -11,10 +11,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: macos-latest
-            python-version: 3.8
-            arch: x86_64
-            target: x86_64-apple-darwin
           - os: macos-14  # Apple Silicon runner
             python-version: 3.8
             arch: arm64
