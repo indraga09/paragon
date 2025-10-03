@@ -23,8 +23,19 @@ def _read_dialogue_data():
 CHAPTER_DIALOGUES = _read_dialogue_data()
 
 
+def _get_truncated_cid(chapter):
+    """Safely extract the truncated CID from a chapter, handling None values."""
+    cid_value = chapter["CID"].value
+    if not cid_value or len(cid_value) < 4:
+        return None
+    return cid_value[4:]
+
+
 def _open_map_config(chapter):
-    truncated_cid = chapter["CID"].value[4:]
+    truncated_cid = _get_truncated_cid(chapter)
+    if not truncated_cid:
+        return None
+    
     target_path = "/map/config/%s.bin" % truncated_cid
     open_files_service = locator.get_scoped("OpenFilesService")
     if not open_files_service.exists(target_path):
@@ -38,7 +49,11 @@ def _open_map_config(chapter):
 
 
 def _open_dispos(chapter):
-    target_file = "%s.bin.lz" % chapter["CID"].value[4:]
+    truncated_cid = _get_truncated_cid(chapter)
+    if not truncated_cid:
+        return None
+    
+    target_file = "%s.bin.lz" % truncated_cid
     target_path = search_all_routes_for_file("/GameData/Dispos/", target_file)
     if not target_path:
         return None
@@ -50,7 +65,11 @@ def _open_dispos(chapter):
 
 
 def _open_terrain(chapter):
-    target_file = "%s.bin.lz" % chapter["CID"].value[4:]
+    truncated_cid = _get_truncated_cid(chapter)
+    if not truncated_cid:
+        return None
+    
+    target_file = "%s.bin.lz" % truncated_cid
     target_path = search_all_routes_for_file("/GameData/Terrain/", target_file)
     if not target_path:
         return None
@@ -62,7 +81,11 @@ def _open_terrain(chapter):
 
 
 def _open_person(chapter):
-    target_file = "%s.bin.lz" % chapter["CID"].value[4:]
+    truncated_cid = _get_truncated_cid(chapter)
+    if not truncated_cid:
+        return None
+    
+    target_file = "%s.bin.lz" % truncated_cid
     target_path = search_all_routes_for_file("/GameData/Person/", target_file)
     if not target_path:
         return None
@@ -75,8 +98,9 @@ def _open_person(chapter):
 
 
 def _open_message_data(chapter):
-    cid = chapter["CID"].value
-    truncated_cid = cid[4:]
+    truncated_cid = _get_truncated_cid(chapter)
+    if not truncated_cid:
+        return []
     result = []
     open_files_service = locator.get_scoped("OpenFilesService")
     try:
@@ -88,7 +112,7 @@ def _open_message_data(chapter):
             else:
                 value = ""
             result.append(value)
-    except:
+    except Exception:
         # We only end up here if a message archive cannot be found.
         # Don't bother with message data if the user didn't set things up correctly.
         return None
@@ -96,8 +120,9 @@ def _open_message_data(chapter):
 
 
 def _save_message_data(chapter):
-    cid = chapter.chapter["CID"].value
-    truncated_cid = cid[4:]
+    truncated_cid = _get_truncated_cid(chapter)
+    if not truncated_cid:
+        return
     open_files_service = locator.get_scoped("OpenFilesService")
     for i in range(0, len(CHAPTER_DIALOGUES)):
         dialogue = CHAPTER_DIALOGUES[i]
@@ -107,7 +132,11 @@ def _save_message_data(chapter):
 
 
 def _open_conversation_data(chapter):
-    target_file = "%s.bin.lz" % chapter["CID"].value[4:]
+    truncated_cid = _get_truncated_cid(chapter)
+    if not truncated_cid:
+        return None
+    
+    target_file = "%s.bin.lz" % truncated_cid
     target_path = search_all_routes_for_file_localized("/m/", target_file)
     if not target_path:
         return None
@@ -131,7 +160,11 @@ class ChapterData:
 
     def save(self):
         open_files_service = locator.get_scoped("OpenFilesService")
-        target_file = "%s.bin.lz" % self.chapter["CID"].value[4:]
+        truncated_cid = _get_truncated_cid(self.chapter)
+        if not truncated_cid:
+            return
+        
+        target_file = "%s.bin.lz" % truncated_cid
         if self.dispos:
             suffix = detect_chapter_file_sub_folder(self.chapter) + target_file
             dispos_path = "/GameData/Dispos/" + suffix

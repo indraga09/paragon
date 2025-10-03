@@ -8,10 +8,11 @@ from compat import QSpinBox, QWidget, QHBoxLayout
 from .property_widget import PropertyWidget
 
 
-class CoordinateWidget(QWidget, PropertyWidget):
+class CoordinateWidget(PropertyWidget, QWidget):
     position_changed = Signal(int, int)
 
     def __init__(self, target_property_name):
+        PropertyWidget.__init__(self, target_property_name)
         QWidget.__init__(self)
         PropertyWidget.__init__(self, target_property_name)
         self.layout = QHBoxLayout()

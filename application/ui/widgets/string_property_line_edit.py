@@ -2,10 +2,10 @@ from compat import QLineEdit
 from .property_widget import PropertyWidget
 
 
-class StringPropertyLineEdit(QLineEdit, PropertyWidget):
+class StringPropertyLineEdit(PropertyWidget, QLineEdit):
     def __init__(self, target_property_name):
-        QLineEdit.__init__(self)
         PropertyWidget.__init__(self, target_property_name)
+        QLineEdit.__init__(self)
         self.editingFinished.connect(self._on_edit)
 
     def _on_edit(self):

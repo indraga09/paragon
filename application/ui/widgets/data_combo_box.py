@@ -4,10 +4,10 @@ from services import service_locator
 from .property_widget import PropertyWidget
 
 
-class DataComboBox(QComboBox, PropertyWidget):
+class DataComboBox(PropertyWidget, QComboBox):
     def __init__(self, target_property_name, data_type, expected_type):
-        QComboBox.__init__(self)
         PropertyWidget.__init__(self, target_property_name)
+        QComboBox.__init__(self)
         data_service = service_locator.locator.get_scoped("ModuleDataService")
         self.data = data_service.entries[data_type]
         for (key, value) in self.data.items():

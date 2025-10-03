@@ -4,10 +4,10 @@ from compat import QComboBox
 from .property_widget import PropertyWidget
 
 
-class ReferencePropertyEditor(QComboBox, PropertyWidget):
+class ReferencePropertyEditor(PropertyWidget, QComboBox):
     def __init__(self, target_property_name, module, other_property_name):
-        QComboBox.__init__(self)
         PropertyWidget.__init__(self, target_property_name)
+        QComboBox.__init__(self)
         self.module = module
         self.other_property_name = other_property_name
         self.setModel(module.entries_model)

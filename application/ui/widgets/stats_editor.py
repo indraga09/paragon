@@ -27,10 +27,10 @@ EDITOR_LABELS_SOV = [
 ]
 
 
-class StatsEditor (QGroupBox, PropertyWidget):
+class StatsEditor (PropertyWidget, QGroupBox):
     def __init__(self, target_property_name):
-        QGroupBox.__init__(self)
         PropertyWidget.__init__(self, target_property_name)
+        QGroupBox.__init__(self)
         layout = QFormLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)
         self.editors = [

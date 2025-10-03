@@ -11,10 +11,10 @@ EDITOR_LABELS = [
 ]
 
 
-class ShopEditor (QGroupBox, PropertyWidget):
+class ShopEditor (PropertyWidget, QGroupBox):
     def __init__(self, target_property_name):
-        QGroupBox.__init__(self)
         PropertyWidget.__init__(self, target_property_name)
+        QGroupBox.__init__(self)
         layout = QFormLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)
         self.editors = [

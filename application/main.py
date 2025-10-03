@@ -45,4 +45,8 @@ state_machine.add_transition(FindProjectToLoadingTransition("FindProject", "Load
 state_machine.add_transition(SelectProjectToLoadingTransition("SelectProject", "Loading"))
 state_machine.add_transition(ReloadProjectTransition("Main", "Loading"))
 state_machine.transition("FindProject")
-sys.exit(application.exec_())
+# Use exec() for PySide6 compatibility, fallback to exec_() for PySide2
+if hasattr(application, 'exec'):
+    sys.exit(application.exec())
+else:
+    sys.exit(application.exec_())

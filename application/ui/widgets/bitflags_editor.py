@@ -2,10 +2,10 @@ from compat import QGroupBox, QFormLayout, QCheckBox, QLabel
 from .property_widget import PropertyWidget
 
 
-class BitflagsEditor(QGroupBox, PropertyWidget):
+class BitflagsEditor(PropertyWidget, QGroupBox):
     def __init__(self, target_property_name, flags):
-        QGroupBox.__init__(self)
         PropertyWidget.__init__(self, target_property_name)
+        QGroupBox.__init__(self)
         if len(flags) > 8:
             raise ValueError
         layout = QFormLayout(self)

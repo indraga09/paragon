@@ -2,10 +2,10 @@ from compat import QDoubleSpinBox
 from .property_widget import PropertyWidget
 
 
-class DoublePropertySpinBox(QDoubleSpinBox, PropertyWidget):
+class DoublePropertySpinBox(PropertyWidget, QDoubleSpinBox):
     def __init__(self, target_property_name):
-        QDoubleSpinBox.__init__(self)
         PropertyWidget.__init__(self, target_property_name)
+        QDoubleSpinBox.__init__(self)
         self.valueChanged.connect(self._on_edit)
         self.setRange(-100000, 100000)
 

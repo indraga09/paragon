@@ -2,10 +2,10 @@ from compat import QWidget, QVBoxLayout, QLineEdit
 from ui.widgets.property_widget import PropertyWidget
 
 
-class MessagePropertyEditor (QWidget, PropertyWidget):
+class MessagePropertyEditor(PropertyWidget, QWidget):
     def __init__(self, target_property_name):
-        QWidget.__init__(self)
         PropertyWidget.__init__(self, target_property_name)
+        QWidget.__init__(self)
         layout = QVBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)
         self.key_editor = QLineEdit()

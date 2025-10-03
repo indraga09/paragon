@@ -8,10 +8,10 @@ from ui.widgets.property_widget import PropertyWidget
 _DEFAULT_COLOR = QColor(0, 0, 0)
 
 
-class RGBAColorEditor(QWidget, PropertyWidget):
+class RGBAColorEditor(PropertyWidget, QWidget):
     def __init__(self, target_property_name):
-        QWidget.__init__(self)
         PropertyWidget.__init__(self, target_property_name)
+        QWidget.__init__(self)
         layout = QHBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)
         self.color_label = QLabel()

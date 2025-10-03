@@ -60,7 +60,11 @@ class DialogueService(AbstractEditorService):
 
     def get_dialogue_value_for_character(self, character, dialogue):
         archive = self.archives[dialogue]
-        chopped_pid = character["PID"].value[4:]
+        pid_value = character["PID"].value
+        if not pid_value or len(pid_value) < 4:
+            return ""
+        
+        chopped_pid = pid_value[4:]
         key = dialogue.key.format(chopped_pid)
         if archive.has_message(key):
             return archive.get_message(key)
@@ -69,7 +73,11 @@ class DialogueService(AbstractEditorService):
 
     def update_dialogue_value_for_character(self, character, dialogue, new_value):
         archive = self.archives[dialogue]
-        chopped_pid = character["PID"].value[4:]
+        pid_value = character["PID"].value
+        if not pid_value or len(pid_value) < 4:
+            return
+        
+        chopped_pid = pid_value[4:]
         key = dialogue.key.format(chopped_pid)
         archive.insert_or_overwrite_message(key, new_value)
 

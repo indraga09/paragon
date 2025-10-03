@@ -3,10 +3,10 @@ from compat import QSpinBox
 from .property_widget import PropertyWidget
 
 
-class IntegerPropertySpinBox(QSpinBox, PropertyWidget):
+class IntegerPropertySpinBox(PropertyWidget, QSpinBox):
     def __init__(self, target_property_name, min_value: int = -1, max_value: int = -1, hexadecimal=False):
-        QSpinBox.__init__(self)
         PropertyWidget.__init__(self, target_property_name)
+        QSpinBox.__init__(self)
         self.hexadecimal = hexadecimal
         if self.hexadecimal:
             self.setPrefix("0x")

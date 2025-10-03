@@ -5,10 +5,10 @@ from ui.property_form import PropertyForm
 from ui.widgets.property_widget import PropertyWidget
 
 
-class PointerPropertyEditor (QGroupBox, PropertyWidget):
+class PointerPropertyEditor (PropertyWidget, QGroupBox):
     def __init__(self, target_property_name, template):
-        QGroupBox.__init__(self)
         PropertyWidget.__init__(self, target_property_name)
+        QGroupBox.__init__(self)
 
         main_layout = QVBoxLayout(self)
         button_layout = QHBoxLayout()

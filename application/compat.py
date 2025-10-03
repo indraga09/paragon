@@ -14,6 +14,21 @@ try:
     from PySide6.QtGui import *
     from PySide6.QtWidgets import *
     
+    # PySide6 compatibility fixes
+    # In PySide6, QAction moved from QtWidgets to QtGui
+    QtWidgets.QAction = QtGui.QAction
+    
+    # In PySide6, exec_() was renamed to exec()
+    # Add compatibility for QApplication and QDialog exec_() methods
+    if not hasattr(QtWidgets.QApplication, 'exec_'):
+        QtWidgets.QApplication.exec_ = QtWidgets.QApplication.exec
+    if not hasattr(QtWidgets.QDialog, 'exec_'):
+        QtWidgets.QDialog.exec_ = QtWidgets.QDialog.exec
+    if not hasattr(QtWidgets.QMenu, 'exec_'):
+        QtWidgets.QMenu.exec_ = QtWidgets.QMenu.exec
+    if not hasattr(QtGui.QDrag, 'exec_'):
+        QtGui.QDrag.exec_ = QtGui.QDrag.exec
+    
     PYSIDE_VERSION = 6
     print(f"Using PySide6 (Qt {QtCore.qVersion()})")
     
@@ -54,7 +69,7 @@ __all__ = [
     'QHBoxLayout', 'QGridLayout', 'QLabel', 'QPushButton', 'QLineEdit',
     'QTextEdit', 'QComboBox', 'QListView', 'QTreeView', 'QTableView',
     'QProgressDialog', 'QFileDialog', 'QMessageBox', 'QStyleFactory',
-    'QGraphicsTextItem'
+    'QGraphicsTextItem', 'QAction'
 ]
 
 def get_pyside_version():

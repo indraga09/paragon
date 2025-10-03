@@ -53,6 +53,12 @@ class FE14SpriteService:
         if not aid:
             aid = jid
 
+        # Add null safety checks for JID and AID
+        if not jid or len(jid) < 4:
+            return None
+        if not aid or len(aid) < 4:
+            return None
+
         unique_path = _UNIQUE_FILE_TEMPLATE % (jid[4:], aid[4:], sprite_file_name)
         head_dir_path = _HEAD_FILE_TEMPLATE % (aid[4:], sprite_file_name)
         body_dir_path = _BODY_FILE_TEMPLATE % (jid[4:], sprite_file_name)

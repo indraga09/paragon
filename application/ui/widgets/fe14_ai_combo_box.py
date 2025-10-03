@@ -4,10 +4,10 @@ from services import service_locator
 from .property_widget import PropertyWidget
 
 
-class FE14AIComboBox(QComboBox, PropertyWidget):
+class FE14AIComboBox(PropertyWidget, QComboBox):
     def __init__(self, target_property_name, label_name):
-        QComboBox.__init__(self)
         PropertyWidget.__init__(self, target_property_name)
+        QComboBox.__init__(self)
         self.data = self._get_data_from_label_name(label_name)
         for label in self.data:
             self.addItem(label, label)

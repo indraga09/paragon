@@ -2,10 +2,10 @@ from compat import QLineEdit
 from .property_widget import PropertyWidget
 
 
-class BufferPropertyLineEdit(QLineEdit, PropertyWidget):
+class BufferPropertyLineEdit(PropertyWidget, QLineEdit):
     def __init__(self, target_property_name, length):
-        QLineEdit.__init__(self)
         PropertyWidget.__init__(self, target_property_name)
+        QLineEdit.__init__(self)
         self.editingFinished.connect(self._on_edit)
         self.setInputMask(self._create_input_mask(length))
 

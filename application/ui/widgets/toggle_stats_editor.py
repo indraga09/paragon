@@ -5,10 +5,10 @@ from services import service_locator
 from ui.widgets.property_widget import PropertyWidget
 from .stats_editor import EDITOR_LABELS, EDITOR_LABELS_SOV
 
-class ToggleStatsEditor (QGroupBox, PropertyWidget):
+class ToggleStatsEditor (PropertyWidget, QGroupBox):
     def __init__(self, target_property_name):
-        QGroupBox.__init__(self)
         PropertyWidget.__init__(self, target_property_name)
+        QGroupBox.__init__(self)
         self.main_layout = QFormLayout(self)
 
         self.buffer_editor = QLineEdit()

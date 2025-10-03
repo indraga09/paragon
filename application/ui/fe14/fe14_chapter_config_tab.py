@@ -36,7 +36,7 @@ class FE14ChapterConfigTab(QScrollArea):
     def update_chapter_data(self, chapter_data):
         self.chapter_data = chapter_data
         chapter_header = chapter_data.chapter if chapter_data else None
-        config = chapter_data.config.element if chapter_data else None
+        config = chapter_data.config.element if chapter_data and chapter_data.config else None
         self.text_data_widget.update_chapter_data(chapter_data)
         self.header_property_form.update_target(chapter_header)
         self.config_property_form.update_target(config)

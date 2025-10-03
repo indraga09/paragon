@@ -37,7 +37,7 @@ class MergedStatsEditor(QWidget):
                 editor = QSpinBox()
                 editor.setRange(-128, 127)
                 editor.setMaximumWidth(60)
-                layout.addWidget(editor, row=i + 1, column=j + 1)
+                layout.addWidget(editor, i + 1, j + 1)
                 self.editors[-1].append(editor)
                 editor.valueChanged.connect(lambda v=None, e=editor, r=i, c=j: self._on_edit(v, e, r, c))
         self.setLayout(layout)

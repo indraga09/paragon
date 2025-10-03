@@ -49,7 +49,11 @@ def search_all_routes_for_file_localized(base_path, file):
 
 
 def detect_route_from_dispo_location(chapter):
-    target_file = "%s.bin.lz" % chapter["CID"].value[4:]
+    cid_value = chapter["CID"].value
+    if not cid_value or len(cid_value) < 4:
+        return ChapterFileLocation.NO_ROUTE
+    
+    target_file = "%s.bin.lz" % cid_value[4:]
     target_path = search_all_routes_for_file("/GameData/Dispos/", target_file)
     if not target_path:
         return ChapterFileLocation.NO_ROUTE

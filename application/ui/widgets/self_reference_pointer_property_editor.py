@@ -3,10 +3,10 @@ from compat import QComboBox
 from .property_widget import PropertyWidget
 
 
-class SelfReferencePointerPropertyEditor(QComboBox, PropertyWidget):
+class SelfReferencePointerPropertyEditor(PropertyWidget, QComboBox):
     def __init__(self, target_property_name, module):
-        QComboBox.__init__(self)
         PropertyWidget.__init__(self, target_property_name)
+        QComboBox.__init__(self)
         self.module = module
         self.setModel(module.entries_model)
         self.currentIndexChanged.connect(self._on_edit)
