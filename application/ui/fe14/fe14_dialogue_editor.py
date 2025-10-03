@@ -1,7 +1,7 @@
-from PySide2 import QtCore
-from PySide2.QtWidgets import QSizePolicy
-from PySide2.QtGui import QIcon
-from PySide2.QtWidgets import QWidget, QListView, QHBoxLayout, QFormLayout, QLabel, QLineEdit, QScrollArea
+from compat import QtCore
+from compat import QSizePolicy
+from compat import QIcon
+from compat import QWidget, QListView, QHBoxLayout, QFormLayout, QLabel, QLineEdit, QScrollArea
 from services.service_locator import locator
 
 

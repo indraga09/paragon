@@ -1,6 +1,6 @@
 from typing import Optional
 
-from PySide2.QtWidgets import QWidget
+from compat import QWidget
 
 from model.fe14 import terrain, dispo
 from model.fe14.chapter_data import ChapterData

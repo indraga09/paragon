@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QWidget
+from compat import QWidget
 
 from ui.widgets.fe14_ai_combo_box import FE14AIComboBox
 from ui.widgets.string_property_line_edit import StringPropertyLineEdit

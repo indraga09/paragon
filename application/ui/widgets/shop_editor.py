@@ -1,5 +1,5 @@
 import struct
-from PySide2.QtWidgets import QSpinBox, QLabel, QFormLayout, QGroupBox
+from compat import QSpinBox, QLabel, QFormLayout, QGroupBox
 from model.project import Game
 from services import service_locator
 from ui.widgets.property_widget import PropertyWidget

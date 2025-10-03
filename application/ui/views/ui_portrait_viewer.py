@@ -1,5 +1,5 @@
-from PySide2 import QtGui
-from PySide2.QtWidgets import QVBoxLayout, QPushButton, QHBoxLayout, QGraphicsView, QLabel, QWidget
+from compat import QtGui
+from compat import QVBoxLayout, QPushButton, QHBoxLayout, QGraphicsView, QLabel, QWidget
 
 
 class Ui_PortraitViewer(QWidget):

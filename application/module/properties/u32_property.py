@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QWidget
+from compat import QWidget
 
 from .plain_value_property import PlainValueProperty
 

@@ -1,9 +1,9 @@
 from copy import deepcopy
 from typing import Optional
 
-from PySide2 import QtCore
-from PySide2.QtCore import QModelIndex
-from PySide2.QtGui import QStandardItemModel, QStandardItem
+from compat import QtCore
+from compat import QModelIndex
+from compat import QStandardItemModel, QStandardItem
 
 from core.simple_undo_redo_stack import SimpleUndoRedoStack
 from model.fe14 import dispo

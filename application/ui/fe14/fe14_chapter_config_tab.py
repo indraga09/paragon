@@ -1,5 +1,5 @@
-from PySide2 import QtCore
-from PySide2.QtWidgets import QWidget, QVBoxLayout, QScrollArea, QSplitter
+from compat import QtCore
+from compat import QWidget, QVBoxLayout, QScrollArea, QSplitter
 
 from services.service_locator import locator
 from ui.property_form import PropertyForm

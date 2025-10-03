@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Any
 
-from PySide2.QtWidgets import QWidget
+from compat import QWidget
 
 from core.export_capabilities import ExportCapabilities, ExportCapability
 

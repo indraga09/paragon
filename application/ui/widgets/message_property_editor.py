@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QWidget, QVBoxLayout, QLineEdit
+from compat import QWidget, QVBoxLayout, QLineEdit
 from ui.widgets.property_widget import PropertyWidget
 
 

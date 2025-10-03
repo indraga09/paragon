@@ -1,7 +1,7 @@
 import logging
 import os
 
-from PySide2.QtWidgets import QWidget, QFileDialog
+from compat import QWidget, QFileDialog
 
 from services.abstract_editor_service import AbstractEditorService
 from services.service_locator import locator

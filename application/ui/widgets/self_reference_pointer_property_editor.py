@@ -1,5 +1,5 @@
-from PySide2 import QtCore
-from PySide2.QtWidgets import QComboBox
+from compat import QtCore
+from compat import QComboBox
 from .property_widget import PropertyWidget
 
 

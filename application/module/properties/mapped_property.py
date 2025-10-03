@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QWidget
+from compat import QWidget
 
 from ui.widgets.string_property_line_edit import StringPropertyLineEdit
 from .plain_value_property import PlainValueProperty

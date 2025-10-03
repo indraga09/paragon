@@ -1,10 +1,10 @@
 import logging
 from typing import Optional
 
-from PySide2 import QtCore
-from PySide2.QtCore import QSortFilterProxyModel, QModelIndex, QPoint
-from PySide2.QtGui import QPixmap, QKeySequence
-from PySide2.QtWidgets import QGraphicsScene, QInputDialog, QMenu, QShortcut, QWidget, QHBoxLayout, QScrollArea
+from compat import QtCore
+from compat import QSortFilterProxyModel, QModelIndex, QPoint
+from compat import QPixmap, QKeySequence
+from compat import QGraphicsScene, QInputDialog, QMenu, QShortcut, QWidget, QHBoxLayout, QScrollArea
 
 from module.properties.property_container import PropertyContainer
 from module.table_module import TableModule

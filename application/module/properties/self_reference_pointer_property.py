@@ -1,6 +1,6 @@
 from typing import Optional, Any
 
-from PySide2.QtWidgets import QWidget
+from compat import QWidget
 
 from services.service_locator import locator
 from ui.widgets.self_reference_pointer_property_editor import SelfReferencePointerPropertyEditor

@@ -1,9 +1,9 @@
 import ctypes
 import struct
 
-from PySide2 import QtGui
-from PySide2.QtCore import Signal
-from PySide2.QtWidgets import QSpinBox, QWidget, QHBoxLayout
+from compat import QtGui
+from compat import Signal
+from compat import QSpinBox, QWidget, QHBoxLayout
 
 from .property_widget import PropertyWidget
 

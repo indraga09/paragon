@@ -1,5 +1,5 @@
-from PySide2 import QtGui
-from PySide2.QtWidgets import QWidget, QPushButton, QHBoxLayout, QVBoxLayout
+from compat import QtGui
+from compat import QWidget, QPushButton, QHBoxLayout, QVBoxLayout
 
 from ui.widgets.fe14_conversation_widget import FE14ConversationWidget
 

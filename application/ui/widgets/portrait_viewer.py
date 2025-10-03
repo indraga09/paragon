@@ -1,7 +1,7 @@
 from typing import Optional, List, Tuple
 
-from PySide2.QtGui import QPixmap
-from PySide2.QtWidgets import QGraphicsScene
+from compat import QPixmap
+from compat import QGraphicsScene
 
 from model.texture import Texture
 from module.properties.property_container import PropertyContainer

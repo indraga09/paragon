@@ -1,5 +1,5 @@
-from PySide2.QtGui import QFont, QFontMetrics, QColor
-from PySide2.QtWidgets import QGraphicsTextItem
+from compat import QFont, QFontMetrics, QColor
+from compat import QGraphicsTextItem
 
 
 def draw_message_text(item: QGraphicsTextItem, font: QFont, text: str, x: int, y: int, max_width: int):

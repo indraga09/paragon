@@ -1,7 +1,7 @@
 import logging
 
-from PySide2.QtGui import QIcon
-from PySide2.QtWidgets import QWidget, QScrollArea, QVBoxLayout
+from compat import QIcon
+from compat import QWidget, QScrollArea, QVBoxLayout
 
 from ui.property_form import PropertyForm
 

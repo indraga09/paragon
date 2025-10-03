@@ -1,6 +1,6 @@
 from typing import Any
-from PySide2 import QtCore
-from PySide2.QtCore import QModelIndex, QAbstractListModel
+from compat import QtCore
+from compat import QModelIndex, QAbstractListModel
 
 from services.service_locator import locator
 

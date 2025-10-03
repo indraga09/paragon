@@ -3,8 +3,7 @@ import sys
 logging.basicConfig(handlers=[logging.FileHandler('paragon.log', 'w', 'utf-8')], level=logging.DEBUG)
 
 try:
-    from PySide2.QtGui import QFontDatabase
-    from PySide2.QtWidgets import QApplication, QStyleFactory
+    from compat import QFontDatabase, QApplication, QStyleFactory
 
     from services.settings_service import SettingsService
     from states.select_project_state import SelectProjectState

@@ -1,5 +1,5 @@
-from PySide2 import QtCore
-from PySide2.QtGui import QStandardItemModel, QStandardItem
+from compat import QtCore
+from compat import QStandardItemModel, QStandardItem
 
 from model.message_archive import MessageArchive
 

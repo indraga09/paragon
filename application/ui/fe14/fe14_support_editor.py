@@ -1,9 +1,9 @@
 import logging
 
-from PySide2 import QtCore
-from PySide2.QtCore import QModelIndex, QSortFilterProxyModel
-from PySide2.QtGui import QIcon
-from PySide2.QtWidgets import QWidget, QListWidgetItem
+from compat import QtCore
+from compat import QModelIndex, QSortFilterProxyModel
+from compat import QIcon
+from compat import QWidget, QListWidgetItem
 
 from ui.autogen.ui_fe14_support_editor import Ui_support_editor
 from services.service_locator import locator

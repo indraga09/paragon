@@ -1,7 +1,7 @@
 import os
 from typing import List
 
-from PySide2.QtGui import QStandardItemModel, QStandardItem
+from compat import QStandardItemModel, QStandardItem
 
 from module.module import Module
 

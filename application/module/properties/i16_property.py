@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QWidget
+from compat import QWidget
 
 from ui.widgets.data_combo_box import DataComboBox
 from ui.widgets.integer_property_spin_box import IntegerPropertySpinBox

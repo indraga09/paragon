@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QDoubleSpinBox
+from compat import QDoubleSpinBox
 from .property_widget import PropertyWidget
 
 

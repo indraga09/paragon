@@ -1,9 +1,9 @@
 import logging
 
-from PySide2 import QtCore
-from PySide2.QtCore import QPoint, QModelIndex
-from PySide2.QtGui import QIcon, QKeySequence
-from PySide2.QtWidgets import QWidget, QInputDialog, QMenu, QAction, QShortcut
+from compat import QtCore
+from compat import QPoint, QModelIndex
+from compat import QIcon, QKeySequence
+from compat import QWidget, QInputDialog, QMenu, QAction, QShortcut
 from module.table_module import TableModule
 from ui.autogen.ui_simple_editor import Ui_simple_editor
 from ui.property_form import PropertyForm

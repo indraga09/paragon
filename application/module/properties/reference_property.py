@@ -1,7 +1,7 @@
 from copy import deepcopy
 from typing import Any
 
-from PySide2.QtWidgets import QWidget
+from compat import QWidget
 from services.service_locator import locator
 from .abstract_property import AbstractProperty
 from ui.widgets.reference_property_editor import ReferencePropertyEditor

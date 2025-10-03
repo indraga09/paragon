@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QWidget
+from compat import QWidget
 
 from ui.widgets.bitflags_editor import BitflagsEditor
 from ui.widgets.data_combo_box import DataComboBox

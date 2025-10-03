@@ -1,7 +1,7 @@
 from typing import Any
 
-from PySide2 import QtCore
-from PySide2.QtGui import QStandardItemModel, QStandardItem
+from compat import QtCore
+from compat import QStandardItemModel, QStandardItem
 
 from core.export_capabilities import ExportCapabilities
 from services.service_locator import locator

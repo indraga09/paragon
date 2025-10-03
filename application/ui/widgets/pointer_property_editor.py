@@ -1,5 +1,5 @@
-from PySide2 import QtCore, QtWidgets
-from PySide2.QtWidgets import QGroupBox, QVBoxLayout, QHBoxLayout, QPushButton, QWidget
+from compat import QtCore, QtWidgets
+from compat import QGroupBox, QVBoxLayout, QHBoxLayout, QPushButton, QWidget
 
 from ui.property_form import PropertyForm
 from ui.widgets.property_widget import PropertyWidget

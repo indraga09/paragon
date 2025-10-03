@@ -1,6 +1,6 @@
-from PySide2 import QtCore
-from PySide2.QtGui import QKeySequence
-from PySide2.QtWidgets import QMainWindow, QToolBar, QAction, QTreeView, QListView, QScrollArea, \
+from compat import QtCore
+from compat import QKeySequence
+from compat import QMainWindow, QToolBar, QAction, QTreeView, QListView, QScrollArea, \
     QSplitter, QStatusBar, QLabel, QMenu, QShortcut
 
 from ui.fe14.fe14_spawn_editor_pane import FE14SpawnEditorPane

@@ -1,5 +1,5 @@
-from PySide2 import QtGui
-from PySide2.QtWidgets import QWidget, QVBoxLayout, QListWidget, QPushButton, QHBoxLayout, QComboBox, QFormLayout, \
+from compat import QtGui
+from compat import QWidget, QVBoxLayout, QListWidget, QPushButton, QHBoxLayout, QComboBox, QFormLayout, \
     QLabel
 
 

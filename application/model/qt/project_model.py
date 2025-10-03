@@ -1,7 +1,7 @@
 from typing import List
 
-from PySide2.QtCore import QModelIndex
-from PySide2.QtGui import QStandardItemModel, QStandardItem
+from compat import QModelIndex
+from compat import QStandardItemModel, QStandardItem
 
 from model.project import Project
 

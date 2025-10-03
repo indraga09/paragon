@@ -1,8 +1,8 @@
 from typing import Optional, Dict, List
 
 from PIL import Image
-from PySide2.QtGui import QPixmap
-from PySide2.QtWidgets import QGraphicsPixmapItem, QGraphicsItemGroup
+from compat import QPixmap
+from compat import QGraphicsPixmapItem, QGraphicsItemGroup
 
 from model.texture import Texture
 from services.service_locator import locator

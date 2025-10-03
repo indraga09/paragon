@@ -1,6 +1,6 @@
 from typing import Any
 
-from PySide2.QtWidgets import QWidget
+from compat import QWidget
 
 from core.bin_streams import BinArchiveReader
 from ui.widgets.pointer_property_editor import PointerPropertyEditor

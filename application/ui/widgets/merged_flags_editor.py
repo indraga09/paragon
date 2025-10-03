@@ -1,7 +1,7 @@
 import struct
 from typing import List
 
-from PySide2.QtWidgets import QSpinBox, QLabel, QWidget, QGridLayout, QHBoxLayout
+from compat import QSpinBox, QLabel, QWidget, QGridLayout, QHBoxLayout
 
 from module.properties.property_container import PropertyContainer
 

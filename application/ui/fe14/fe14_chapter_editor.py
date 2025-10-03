@@ -1,9 +1,9 @@
 from typing import Optional
 
-from PySide2 import QtCore
-from PySide2.QtCore import QSortFilterProxyModel, QModelIndex
-from PySide2.QtGui import QIcon
-from PySide2.QtWidgets import QInputDialog
+from compat import QtCore
+from compat import QSortFilterProxyModel, QModelIndex
+from compat import QIcon
+from compat import QInputDialog
 
 from model.fe14.chapter_data import ChapterData
 from services.service_locator import locator

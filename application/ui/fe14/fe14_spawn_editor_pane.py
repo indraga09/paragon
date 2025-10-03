@@ -1,6 +1,6 @@
 from typing import Optional
 
-from PySide2.QtWidgets import QScrollArea, QWidget
+from compat import QScrollArea, QWidget
 
 from model.fe14.dispo import get_spawn_template
 from module.properties.property_container import PropertyContainer

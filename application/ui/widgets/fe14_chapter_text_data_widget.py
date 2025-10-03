@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QScrollArea, QWidget, QFormLayout, QLabel, QLineEdit
+from compat import QScrollArea, QWidget, QFormLayout, QLabel, QLineEdit
 
 from model.fe14.chapter_data import CHAPTER_DIALOGUES
 

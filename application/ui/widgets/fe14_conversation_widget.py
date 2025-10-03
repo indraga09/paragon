@@ -1,8 +1,8 @@
 from typing import Optional, List
 
-from PySide2 import QtGui
-from PySide2.QtGui import QFont
-from PySide2.QtWidgets import QGraphicsView, QGraphicsScene, QGraphicsItem
+from compat import QtGui
+from compat import QFont
+from compat import QGraphicsView, QGraphicsScene, QGraphicsItem
 
 from services.service_locator import locator
 from ui.misc.type1_draw_strategy import Type1DrawStrategy

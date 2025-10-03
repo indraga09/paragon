@@ -1,10 +1,10 @@
 import logging
 from typing import Optional
 
-from PySide2 import QtCore, QtGui
-from PySide2.QtCore import QModelIndex
-from PySide2.QtGui import QSyntaxHighlighter, QTextCharFormat, QIcon, QTextCursor
-from PySide2.QtWidgets import QAction, QInputDialog, QMessageBox
+from compat import QtCore, QtGui
+from compat import QModelIndex
+from compat import QSyntaxHighlighter, QTextCharFormat, QIcon, QTextCursor
+from compat import QAction, QInputDialog, QMessageBox
 
 from core.conversation import convert
 from core.conversation.convert import paragon_to_commands, paragon_to_game, commands_to_game

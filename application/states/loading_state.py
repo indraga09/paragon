@@ -2,9 +2,9 @@ import logging
 import sys
 from typing import Optional
 
-from PySide2 import QtCore
-from PySide2.QtGui import QIcon
-from PySide2.QtWidgets import QProgressDialog
+from compat import QtCore
+from compat import QIcon
+from compat import QProgressDialog
 
 from core.state_machine import State
 from model.project import Project

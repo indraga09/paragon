@@ -1,5 +1,5 @@
-from PySide2 import QtCore
-from PySide2.QtCore import QSortFilterProxyModel
+from compat import QtCore
+from compat import QSortFilterProxyModel
 
 
 class ModuleFilterModel(QSortFilterProxyModel):

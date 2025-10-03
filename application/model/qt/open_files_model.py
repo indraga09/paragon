@@ -1,7 +1,7 @@
 import logging
 from typing import Any
-from PySide2 import QtCore
-from PySide2.QtCore import QAbstractListModel, QModelIndex
+from compat import QtCore
+from compat import QAbstractListModel, QModelIndex
 from services.service_locator import locator
 
 

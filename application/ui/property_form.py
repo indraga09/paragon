@@ -1,7 +1,7 @@
 from typing import Optional
 
-from PySide2 import QtWidgets
-from PySide2.QtWidgets import QFormLayout, QScrollArea, QWidget
+from compat import QtWidgets
+from compat import QFormLayout, QScrollArea, QWidget
 
 from module.properties.property_container import PropertyContainer
 

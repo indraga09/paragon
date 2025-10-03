@@ -1,7 +1,7 @@
-from PySide2 import QtGui, QtCore
-from PySide2.QtCore import QModelIndex
-from PySide2.QtGui import QKeySequence
-from PySide2.QtWidgets import QWidget, QTreeView, QSplitter, QVBoxLayout, QFormLayout, QLabel, QCheckBox, \
+from compat import QtGui, QtCore
+from compat import QModelIndex
+from compat import QKeySequence
+from compat import QWidget, QTreeView, QSplitter, QVBoxLayout, QFormLayout, QLabel, QCheckBox, \
     QInputDialog, QShortcut
 
 from model import fe14

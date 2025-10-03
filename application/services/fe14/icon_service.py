@@ -1,6 +1,6 @@
 from typing import Optional, Dict, List
 
-from PySide2.QtGui import QIcon, QPixmap
+from compat import QIcon, QPixmap
 
 from model.texture import Texture
 from module.properties.property_container import PropertyContainer

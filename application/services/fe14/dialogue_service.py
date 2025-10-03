@@ -1,7 +1,7 @@
 import json
 from typing import List, Tuple, Dict
 
-from PySide2.QtWidgets import QWidget
+from compat import QWidget
 
 from core.export_capabilities import ExportCapabilities, ExportCapability
 from module.table_module import TableModule

@@ -1,7 +1,7 @@
 from typing import Any, List
 
-from PySide2 import QtCore
-from PySide2.QtCore import QAbstractListModel, QModelIndex
+from compat import QtCore
+from compat import QAbstractListModel, QModelIndex
 
 from model.fe14 import terrain
 

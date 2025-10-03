@@ -1,9 +1,9 @@
 import logging
 from typing import cast
 
-from PySide2 import QtCore, QtWidgets, QtGui
-from PySide2.QtGui import QIcon
-from PySide2.QtWidgets import QMainWindow, QFileDialog, QStyleFactory, QActionGroup, QAction, QMessageBox
+from compat import QtCore, QtWidgets, QtGui
+from compat import QIcon
+from compat import QMainWindow, QFileDialog, QStyleFactory, QActionGroup, QAction, QMessageBox
 
 from model.qt.module_filter_model import ModuleFilterModel
 from model.qt.open_files_model import OpenFilesModel

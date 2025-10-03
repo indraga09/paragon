@@ -1,5 +1,5 @@
-from PySide2.QtGui import QIcon
-from PySide2.QtWidgets import QTabWidget
+from compat import QIcon
+from compat import QTabWidget
 
 from services.service_locator import locator
 from ui.object_editor import ObjectEditor

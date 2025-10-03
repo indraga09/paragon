@@ -1,7 +1,7 @@
-from PySide2 import QtGui
-from PySide2.QtCore import QModelIndex
-from PySide2.QtGui import QIcon
-from PySide2.QtWidgets import QMainWindow, QTableView, QHeaderView, QAbstractItemView
+from compat import QtGui
+from compat import QModelIndex
+from compat import QIcon
+from compat import QMainWindow, QTableView, QHeaderView, QAbstractItemView
 
 from model.qt.project_model import ProjectModel
 from services.service_locator import locator

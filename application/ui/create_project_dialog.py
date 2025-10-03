@@ -1,7 +1,7 @@
 import logging
 
-from PySide2.QtGui import QIcon
-from PySide2.QtWidgets import QDialog, QFileDialog, QErrorMessage
+from compat import QIcon
+from compat import QDialog, QFileDialog, QErrorMessage
 from ui.autogen.ui_create_project_dialog import Ui_CreateProject
 from model.project import Project
 

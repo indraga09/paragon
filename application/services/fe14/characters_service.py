@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QWidget
+from compat import QWidget
 
 from services.abstract_editor_service import AbstractEditorService
 from services.service_locator import locator

@@ -1,4 +1,5 @@
-PySide2
+PySide6;python_version>="3.10"
+PySide2;python_version<"3.10"
 maturin
 pillow
 diskcache

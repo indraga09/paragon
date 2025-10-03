@@ -1,5 +1,5 @@
-from PySide2.QtGui import QValidator
-from PySide2.QtWidgets import QSpinBox
+from compat import QValidator
+from compat import QSpinBox
 from .property_widget import PropertyWidget
 
 

@@ -2,8 +2,8 @@ import json
 import traceback
 from typing import Tuple, List
 
-from PySide2.QtCore import Signal
-from PySide2.QtWidgets import QWidget, QGridLayout, QScrollArea
+from compat import Signal
+from compat import QWidget, QGridLayout, QScrollArea
 
 from ui.widgets.fe14_map_cell import FE14MapCell
 

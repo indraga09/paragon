@@ -8,7 +8,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PySide2 import QtCore, QtGui, QtWidgets
+from compat import QtCore, QtGui, QtWidgets
 
 class Ui_CreateProject(object):
     def setupUi(self, CreateProject):

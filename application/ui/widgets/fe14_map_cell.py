@@ -1,9 +1,9 @@
 from enum import Enum
 
-from PySide2 import QtGui, QtCore, QtWidgets
-from PySide2.QtCore import Signal, QMimeData
-from PySide2.QtGui import QMouseEvent, QPixmap, QDrag, QDragEnterEvent, QDragMoveEvent, QDropEvent
-from PySide2.QtWidgets import QLabel
+from compat import QtGui, QtCore, QtWidgets
+from compat import Signal, QMimeData
+from compat import QMouseEvent, QPixmap, QDrag, QDragEnterEvent, QDragMoveEvent, QDropEvent
+from compat import QLabel
 
 from services.service_locator import locator
 

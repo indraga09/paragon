@@ -1,5 +1,5 @@
-from PySide2 import QtGui
-from PySide2.QtWidgets import QFrame, QFormLayout, QLineEdit, QCheckBox, QMainWindow, QHBoxLayout, QPushButton, \
+from compat import QtGui
+from compat import QFrame, QFormLayout, QLineEdit, QCheckBox, QMainWindow, QHBoxLayout, QPushButton, \
     QVBoxLayout, QTabWidget, QStatusBar, QWidget, QToolBar, QListView, QTextEdit
 
 from ui.widgets.fe14_conversation_player import FE14ConversationPlayer

@@ -1,7 +1,7 @@
 import struct
 
-from PySide2.QtGui import QColor
-from PySide2.QtWidgets import QWidget, QHBoxLayout, QLabel, QSizePolicy, QColorDialog, QPushButton
+from compat import QColor
+from compat import QWidget, QHBoxLayout, QLabel, QSizePolicy, QColorDialog, QPushButton
 
 from ui.widgets.property_widget import PropertyWidget
 

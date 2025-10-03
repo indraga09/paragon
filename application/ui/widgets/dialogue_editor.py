@@ -1,6 +1,6 @@
 from typing import Optional
 
-from PySide2.QtWidgets import QScrollArea, QWidget, QFormLayout, QLabel, QLineEdit
+from compat import QScrollArea, QWidget, QFormLayout, QLabel, QLineEdit
 
 from module.properties.property_container import PropertyContainer
 from services.service_locator import locator

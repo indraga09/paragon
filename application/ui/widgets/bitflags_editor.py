@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QGroupBox, QFormLayout, QCheckBox, QLabel
+from compat import QGroupBox, QFormLayout, QCheckBox, QLabel
 from .property_widget import PropertyWidget
 
 

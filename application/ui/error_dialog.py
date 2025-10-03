@@ -1,5 +1,5 @@
-from PySide2.QtGui import QIcon
-from PySide2.QtWidgets import QDialog
+from compat import QIcon
+from compat import QDialog
 from ui.autogen.ui_error_dialog import Ui_error_dialog
 
 

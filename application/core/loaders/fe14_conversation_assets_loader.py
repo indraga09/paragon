@@ -1,6 +1,6 @@
 from typing import Dict, List, Optional
 
-from PySide2.QtGui import QPixmap, QImage
+from compat import QPixmap, QImage
 
 from services.service_locator import locator
 

@@ -1,10 +1,10 @@
 import logging
 from typing import Optional
 
-from PySide2 import QtCore
-from PySide2.QtCore import QPoint, QModelIndex
-from PySide2.QtGui import QIcon
-from PySide2.QtWidgets import QWidget, QMenu, QAction, QInputDialog
+from compat import QtCore
+from compat import QPoint, QModelIndex
+from compat import QIcon
+from compat import QWidget, QMenu, QAction, QInputDialog
 
 from model.qt.voice_set_model import VoiceSetEntriesModel
 from module.properties.property_container import PropertyContainer

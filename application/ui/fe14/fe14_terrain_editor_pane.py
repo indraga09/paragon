@@ -1,6 +1,6 @@
 from typing import Optional
 
-from PySide2.QtWidgets import QScrollArea, QWidget, QVBoxLayout, QPushButton
+from compat import QScrollArea, QWidget, QVBoxLayout, QPushButton
 
 from model.fe14.terrain import Terrain, get_tile_template
 from module.properties.property_container import PropertyContainer

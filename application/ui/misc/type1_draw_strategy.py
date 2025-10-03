@@ -1,6 +1,6 @@
-from PySide2 import QtGui
-from PySide2.QtGui import QPixmap, QColor, QTextBlockFormat, QTextCursor
-from PySide2.QtWidgets import QGraphicsItemGroup, QGraphicsScene, QGraphicsTextItem
+from compat import QtGui
+from compat import QPixmap, QColor, QTextBlockFormat, QTextCursor
+from compat import QGraphicsItemGroup, QGraphicsScene, QGraphicsTextItem
 
 from utils import text_utils
 

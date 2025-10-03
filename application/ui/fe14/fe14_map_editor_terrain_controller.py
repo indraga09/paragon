@@ -1,7 +1,7 @@
 from typing import Optional
 
-from PySide2 import QtCore
-from PySide2.QtCore import QModelIndex
+from compat import QtCore
+from compat import QModelIndex
 
 from model.fe14.chapter_data import ChapterData
 from model.qt.tiles_model import TilesModel

@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QLineEdit
+from compat import QLineEdit
 from .property_widget import PropertyWidget
 
 

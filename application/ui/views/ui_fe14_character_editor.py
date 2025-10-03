@@ -1,6 +1,6 @@
-from PySide2 import QtCore
-from PySide2.QtGui import QIcon
-from PySide2.QtWidgets import QWidget, QLineEdit, QListView, QVBoxLayout, QGroupBox, QTabWidget, QHBoxLayout, QFrame, \
+from compat import QtCore
+from compat import QIcon
+from compat import QWidget, QLineEdit, QListView, QVBoxLayout, QGroupBox, QTabWidget, QHBoxLayout, QFrame, \
     QGraphicsView, QMainWindow, QToolBar, QAction, QScrollArea
 
 from ui.widgets.portrait_viewer import PortraitViewer

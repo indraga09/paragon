@@ -1,6 +1,6 @@
 from typing import Any
 
-from PySide2.QtWidgets import QWidget
+from compat import QWidget
 from module.properties.abstract_property import AbstractProperty
 from services import service_locator
 from ui.widgets.message_property_editor import MessagePropertyEditor

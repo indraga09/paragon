@@ -1,6 +1,6 @@
 from typing import List
 
-from PySide2.QtWidgets import QWidget
+from compat import QWidget
 
 from core.bin_streams import BinArchiveWriter, BinArchiveReader
 from core.export_capabilities import ExportCapabilities, ExportCapability

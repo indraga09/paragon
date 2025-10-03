@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QComboBox
+from compat import QComboBox
 
 from services import service_locator
 from .property_widget import PropertyWidget

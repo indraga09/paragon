@@ -1,10 +1,10 @@
 import json
 import logging
 
-from PySide2 import QtWidgets, QtGui, QtCore
-from PySide2.QtCore import QModelIndex
-from PySide2.QtGui import QIcon
-from PySide2.QtWidgets import QWidget, QVBoxLayout, QTreeView, QFileDialog, QPushButton, QCheckBox, QMessageBox
+from compat import QtWidgets, QtGui, QtCore
+from compat import QModelIndex
+from compat import QIcon
+from compat import QWidget, QVBoxLayout, QTreeView, QFileDialog, QPushButton, QCheckBox, QMessageBox
 
 from model.qt.export_changes_model import ExportChangesModel
 from services.service_locator import locator

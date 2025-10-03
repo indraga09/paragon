@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QWidget
+from compat import QWidget
 
 from ui.widgets.buffer_property_line_edit import BufferPropertyLineEdit
 from ui.widgets.coordinate_widget import CoordinateWidget

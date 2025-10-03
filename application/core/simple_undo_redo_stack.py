@@ -1,4 +1,4 @@
-from PySide2.QtCore import Signal, QObject
+from compat import Signal, QObject
 
 
 class SimpleUndoRedoStack(QObject):

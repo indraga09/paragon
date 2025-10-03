@@ -1,7 +1,7 @@
 from typing import Optional, List
 
-from PySide2 import QtCore
-from PySide2.QtWidgets import QListWidgetItem, QListWidget
+from compat import QtCore
+from compat import QListWidgetItem, QListWidget
 
 from module.properties.property_container import PropertyContainer
 from services.fe14.supports_service import Support

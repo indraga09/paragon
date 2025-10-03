@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QGraphicsItemGroup
+from compat import QGraphicsItemGroup
 
 
 class Type0DrawStrategy:

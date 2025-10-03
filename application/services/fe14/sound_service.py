@@ -1,6 +1,6 @@
 import logging
 
-from PySide2.QtWidgets import QWidget
+from compat import QWidget
 
 from core.bin_streams import BinArchiveReader, BinArchiveWriter
 from model.qt.voice_set_model import VoiceSetEntriesModel, VoiceSetModel

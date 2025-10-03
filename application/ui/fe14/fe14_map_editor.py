@@ -1,6 +1,6 @@
-from PySide2.QtCore import QModelIndex, QPoint
-from PySide2.QtGui import QKeySequence
-from PySide2.QtWidgets import QShortcut
+from compat import QModelIndex, QPoint
+from compat import QKeySequence
+from compat import QShortcut
 
 from ui.views.ui_fe14_map_editor import Ui_FE14MapEditor
 

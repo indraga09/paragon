@@ -3,7 +3,7 @@ from typing import Dict, Optional
 
 import fefeditor2
 from PIL import Image
-from PySide2.QtGui import QPixmap
+from compat import QPixmap
 from diskcache import Cache
 
 from model.texture import Texture
